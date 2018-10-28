@@ -1,0 +1,75 @@
+.btnp, .btnd, .btng, .btnm, .btnph, .btnb, .btnf, .btna{
+	border-radius: 50%;
+    color: white;    
+    width: 125px;
+    height: 125px;
+	border:solid 1px black;		
+}
+	
+.btnpr{
+	border-radius: 50%;
+    background: #003366;     
+    width: 200px;
+    height: 200px;
+	color:white;
+	border:solid 1px black;	
+}
+
+.btnp{background: #CCCC00;}
+.btng{background: #CC0000;}
+.btnm{background: #0066CC;}
+.btnph{background: #6600CC;}
+.btnb{background: #663300;}
+.btnf{background: #009900;}
+.btna{background: #FF8000;}
+
+.showbook, .hidebook, .showfile, .hidefile, .showgame, .hidegame, .showmovie, .hidemovie, .showmusic, .hidemusic, .showphoto, .hidephoto, .showprogram, .hideprogram{
+	padding: 10px;
+	font-size: 15px;
+	color: white;
+	background: #003366;	
+	border: solid 1px white;
+	border-radius: 5px;
+	margin-top: 10px;
+}
+
+.showbook:hover, .hidebook:hover, .showfile:hover, .hidefile:hover, .showgame:hover, .hidegame:hover, .showmovie:hover, .hidemovie:hover, .showmusic:hover, 
+.hidemusic:hover, .showphoto:hover, .hidephoto:hover, .showprogram:hover, .hideprogram:hover, .btng:hover, .btnb:hover, .btna:hover, .btnf:hover, .btnm:hover, 
+.btnp:hover, .btnph:hover, .btnpr:hover, .btn:hover, #bookb:hover, #photob:hover, #musicb:hover, #fileb:hover, #gameb:hover, #movieb:hover, #programb:hover{
+	background: #B0C4DE;
+}
+
+tr{
+	border-top: 1px solid #cbcbcb;
+	border-bottom: 1px solid #cbcbcb;
+}
+
+.game, .movie, .program, .book, .author, .file, .description{text-align: left;}
+
+.number, .year, .language, .type, .storageType, .creator, .format, .count{text-align: center;}
+
+#storage_type, #type, #language, #format{
+	height: 40px;
+	width: 40%;
+	padding: 5px 10px;
+	background: white;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+#search{
+	height: 40px;
+	width: 60%;
+	padding: 5px 10px;
+	background: white;
+	font-size: 16px;
+	border-radius: 5px;
+	border: 1px solid gray;
+}
+
+.container-fluid {  
+  align-items: middle;
+  justify-content: middle;    
+}
+
