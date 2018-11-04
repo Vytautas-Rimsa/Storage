@@ -28,8 +28,7 @@
 			<a href="../storage.php"><button type="button" class="btn" name="home">Home</button></a>
 			<a href="preview.php"><button type="button" class="btn" name="preview">Preview</button></a>
 		</div>			
-	</form>	
-	
+	</form>
 		
 	<!----------BOOK TABLE---------->
 	<div class="header">

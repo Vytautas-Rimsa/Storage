@@ -14,7 +14,7 @@
 		}
 	</style>	
 	<script src="//code.jquery.com/jquery-1.10.2.js"></script>	
-	<script type="text/javascript" src="../javaScript.js"></script>	
+	<script type="text/javascript" src="../javaScript.js"></script>		
 </head>
 <body>	
 	<div class="header">
@@ -22,8 +22,8 @@
 	</div>	
 	<form method="post" action="search.php">
 		<div class="input-group">
-			<p>In this section You could see all the written data in the Storage database. <br>You will find six different tables with unique content. 
-			You will be able to Edit or even Delete each tables data. <br>Of course, there will be several search functions.</p>			
+			<p>In this section You could see all the written data in the Storage database. <br>You will find seven different tables with unique content. 
+			You will be able to Edit, Sort, Delete or even search through tables data.</p>			
 		</div>		
 		<div class="input-group">				
 			<a href="../storage.php"><button type="button" class="btn" name="home">Home</button></a>&nbsp;&nbsp;
@@ -31,8 +31,8 @@
 			<button type="button" class="btn hideTables" name="home">Hide tables</button>
 		</div>
 		<div class="input-group">				
-			<input type="text" name="searchWord" id="search">
-			<a href="search.php"><button type="submit" class="btn" name="search" value="Filter">Search</button></a>
+			<input type="text" name="searchWord" id="search" onkeyup="enableSearchButton()">
+			<a href="search.php"><button type="submit" class="btn" name="search" id="searchButton" disabled>Search</button></a>
 		</div>		
 	</form>		
 	<!----------BOOK TABLE---------->
@@ -40,22 +40,21 @@
 		<h2>Books table content</h2>
 		<p>
 			<button class="showbook">Show table</button>&nbsp;&nbsp;
-			<button class="hidebook">Hide table</button>&nbsp;&nbsp;
-			<a href="sortBookTable.php"><button class="showbook">Sort table</button></a>
+			<button class="hidebook">Hide table</button>			
 		</p>
 	</div>
 	<div class="divtablebook">
 		<table>
 			<thead>			
 				<tr class="collapse">
-					<th>Nr.</th>				
-					<th>Book title</th>
-					<th>Author</th>
-					<th>Type</th>
-					<th>Language</th>
-					<th>Year</th>
-					<th>Format</th>
-					<th>Storage type</th>
+					<th><a href="preview.php?sort=bookNumber">Nr.</a></th>				
+					<th><a href="preview.php?sorting= <?php echo $sort ?>&field=title">Book title</a></th>
+					<th><a href="preview.php?sort=bookAuthor">Author</a></th>
+					<th><a href="preview.php?sort=bookType">Type</a></th>
+					<th><a href="preview.php?sort=bookLanguage">Language</a></th>
+					<th><a href="preview.php?sort=bookYear">Year</a></th>
+					<th><a href="preview.php?sort=bookFormat">Format</a></th>
+					<th><a href="preview.php?sort=bookStorageType">Storage type</a></th>
 					<th></th>
 					<th></th>		
 				</tr>
@@ -127,8 +126,7 @@
 		<h2>Games table content</h2>
 		<p>
 			<button class="showgame">Show table</button>&nbsp;&nbsp;
-			<button class="hidegame">Hide table</button>&nbsp;&nbsp;
-			<a href="sortGameTable.php"><button class="showbook">Sort table</button></a>			
+			<button class="hidegame">Hide table</button>					
 		</p>
 	</div>
 	<div class="divtablegame">

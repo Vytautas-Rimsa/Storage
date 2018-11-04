@@ -1,5 +1,4 @@
 <?php 
-	
 	// prisijungimas prie duomenu bazes
 	$con = mysqli_connect('localhost', 'root', '', 'storage');
 	
@@ -24,8 +23,8 @@
 	$storage_type="";
 	$title="";
 	$type="";
-	$year="";	
-		
+	$year="";			
+	
 	if (isset($_POST['save_game_btn'])){
 		enterGame();
 	}
@@ -50,7 +49,7 @@
 	
 	if (isset($_POST['save_music_btn'])){
 		enterMusic();
-	}
+	}	
 	
 	function enterGame(){
 		global $con, $errors;
@@ -303,6 +302,7 @@
 	$musics = mysqli_query($con, "SELECT * FROM music");
 	$photos = mysqli_query($con, "SELECT * FROM photo");
 	$programs = mysqli_query($con, "SELECT * FROM program");
+	//$sortBooks = mysqli_query($con, "SELECT * FROM book ORDER BY $field $sort");
 	
 	// deleting table content	
 	if (isset($_GET['del_book'])){
@@ -471,8 +471,8 @@
 		header('location: preview.php');		
 	}
 	
-	//-----------------Searching in tables---------------------------//
-	if (isset($_POST['search'])){
+	//-----------------Searching in tables---------------------------//		
+	if (isset($_POST['search'])){		
 		$searchWord = $_POST['searchWord'];		
 		$resultBook = mysqli_query($con, "SELECT * FROM book WHERE title LIKE '%$searchWord%' OR author LIKE '%$searchWord%' OR year LIKE '%$searchWord%'");
 		$resultFile = mysqli_query($con, "SELECT * FROM file WHERE title LIKE '%$searchWord%' OR description LIKE '%$searchWord%'");
@@ -480,8 +480,67 @@
 		$resultMovie = mysqli_query($con, "SELECT * FROM movie WHERE movie_title LIKE '%$searchWord%' OR year LIKE '%$searchWord%'");
 		$resultMusic = mysqli_query($con, "SELECT * FROM music WHERE artist LIKE '%$searchWord%' OR song_name LIKE '%$searchWord%' OR album LIKE '%$searchWord%' OR year LIKE '%$searchWord%'");
 		$resultPhoto = mysqli_query($con, "SELECT * FROM photo WHERE description LIKE '%$searchWord%' OR year LIKE '%$searchWord%'");
-		$resultProgram = mysqli_query($con, "SELECT * FROM program WHERE program_name LIKE '%$searchWord%' OR creator LIKE '%$searchWord%' OR year LIKE '%$searchWord%'");		
+		$resultProgram = mysqli_query($con, "SELECT * FROM program WHERE program_name LIKE '%$searchWord%' OR creator LIKE '%$searchWord%' OR year LIKE '%$searchWord%'");
 	}
+	//---------------------Sorting Book table------------------------//
+	/*if ($_GET['sort']=='bookNumber'){
+		$books .= " ORDER BY bookNumber";
+	} else if($_GET['sort']=='bookTitle'){
+		$books .= " ORDER BY bookTitle";
+	} else if($_GET['sort']=='bookAuthor'){
+		$books .= " ORDER BY bookAuthor";
+	} else if($_GET['sort']=='bookType'){
+		$books .= " ORDER BY bookType";
+	} else if($_GET['sort']=='bookLanguage'){
+		$books .= " ORDER BY bookLanguage";
+	} else if($_GET['sort']=='bookYear'){
+		$books .= " ORDER BY bookYear";
+	} else if($_GET['sort']=='bookFormat'){
+		$books .= " ORDER BY bookFormat";
+	} else if($_GET['sort']=='bookStorageType'){
+		$books .= " ORDER BY bookStorageType";
+	}*/
+	
+	/*if(isset($_GET['sorting']))
+{
+    if($_GET['sorting']=='ASC')
+    {
+        $sort='DESC';
+        $sortOrder=' &#8595';
+    }
+    else 
+    {
+        $sort='ASC';
+        $sortOrder=' &#8593';
+    }
+}*/
+
+/*if(isset($_GET['field']))
+{
+    /*if($_GET['field']=='ISBN')
+    {
+        $field='ISBN';
+        $sortISBN='ISBN ' . $sortOrder;
+    }
+    elseif($_GET['field']=='Author')
+    {
+        $field='Author';
+        $sortAuthor='Author ' . $sortOrder;
+    }
+    elseif($_GET['field']=='Title')
+    {
+        $field='Title';
+        $sortTitle='Title ' . $sortOrder;
+    }*/
+	
+	/*if($_GET['field']=='title')
+    {
+        $field='title';
+        $sortBookTitle='title ' . $sortOrder;
+    }
+}*/
+	
+	
 	
 	// escape string
 	function e($val){

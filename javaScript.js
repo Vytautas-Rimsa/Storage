@@ -81,3 +81,12 @@ $(document).ready(function() {
 		$(".divtablebook").show(50);
 	});
 });
+// SEARCH mygtuko aktyvavimas
+function enableSearchButton() {
+	if(document.getElementById("search").value==="") { 
+		document.getElementById('searchButton').disabled = true; 
+    } else { 
+		document.getElementById('searchButton').disabled = false;
+    }
+}
+

@@ -32,7 +32,7 @@
 			<a href="preview.php"><button type="button" class="btn" name="preview">Preview</button></a>			
 		</div>
 		<div class="input-group">				
-			<input type="text" name="search" id="search">
+			<input type="text" name="searchWord" id="search">
 			<a href="search.php"><button type="submit" class="btn" name="search" value="Filter">Search</button></a>
 		</div>				
 	
