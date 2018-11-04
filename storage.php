@@ -22,34 +22,34 @@
             <form class="form-horizontal" action="">
 				<div class="form-group">                    
                     <div class="col-lg-3" align="right">
-                        <a href="enter/enter_game.php"><button class="btng" type="button">Game</button></a>
+                        <a href="enter/enter_game.php"><button class="btnGame" type="button">Game</button></a>
                     </div>					
 					<div class="col-lg-3" align="center">
-                        <a href="enter/enter_movie.php"><button class="btnm" type="button">Movie</button></a>
+                        <a href="enter/enter_movie.php"><button class="btnMovie" type="button">Movie</button></a>
                     </div>					
 					<div class="col-lg-3" align="center">
-                        <a href="enter/enter_program.php"><button class="btnp" type="button">Program</button></a>
+                        <a href="enter/enter_program.php"><button class="btnProgram" type="button">Program</button></a>
                     </div>
 					<div class="col-lg-3" align="left">
-                        <a href="enter/enter_book.php"><button class="btnb" type="button">Book</button></a>
+                        <a href="enter/enter_book.php"><button class="btnBook" type="button">Book</button></a>
                     </div>					
                 </div>
 				
 				<div class="form-group">
                     <div class="col-lg-4" align="right">
-                        <a href="enter/enter_photo.php"><button class="btnph" type="button">Photo</button></a>
+                        <a href="enter/enter_photo.php"><button class="btnPhoto" type="button">Photo</button></a>
                     </div>					
 					<div class="col-lg-4" align="center">
-                        <a href="tasks/preview.php"><button class="btnpr" type="button">Preview</button></a>
+                        <a href="tasks/preview.php"><button class="btnPreview" type="button">Preview</button></a>
                     </div>						
 					<div class="col-lg-4" align="left">
-                        <a href="enter/enter_file.php"><button class="btnf" type="button">File</button></a>
+                        <a href="enter/enter_file.php"><button class="btnFile" type="button">File</button></a>
                     </div>
                 </div>				
 				
 				<div class="form-group"><br>                 
                     <div class="col-lg-12" align="center">
-                        <a href="enter/enter_music.php"><button class="btna" type="button">Music</button></a>
+                        <a href="enter/enter_music.php"><button class="btnMusic" type="button">Music</button></a>
                     </div>										
                 </div>								
             </form>			

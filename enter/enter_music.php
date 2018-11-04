@@ -45,7 +45,7 @@
 		</div>			
 		<div class="input-group">
 			<label>Year</label>
-			<input type="number" name="year" min="1900" max="2100" value="<?php echo $year; ?>">
+			<input type="number" name="year" min="1900" max="2100" id="year" value=" <?php echo $year; ?>">
 		</div>		
 		<div class="input-group">
 			<label>Storage Type</label>

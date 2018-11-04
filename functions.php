@@ -24,7 +24,7 @@
 	$storage_type="";
 	$title="";
 	$type="";
-	$year="";
+	$year="";	
 		
 	if (isset($_POST['save_game_btn'])){
 		enterGame();
@@ -346,7 +346,7 @@
 		mysqli_query($con, "DELETE FROM program WHERE id=$id");
 		header('location: preview.php');
 	}
-	//---------------------//
+	//---------------------Editing tables content----------------------------------------//
 	if (isset($_GET['edit_game'])){
 		$id=$_GET['edit_game'];
 		$res=mysqli_query($con, "SELECT * FROM game WHERE id=$id");
@@ -471,12 +471,24 @@
 		header('location: preview.php');		
 	}
 	
+	//-----------------Searching in tables---------------------------//
+	if (isset($_POST['search'])){
+		$searchWord = $_POST['searchWord'];		
+		$resultBook = mysqli_query($con, "SELECT * FROM book WHERE title LIKE '%$searchWord%' OR author LIKE '%$searchWord%' OR year LIKE '%$searchWord%'");
+		$resultFile = mysqli_query($con, "SELECT * FROM file WHERE title LIKE '%$searchWord%' OR description LIKE '%$searchWord%'");
+		$resultGame = mysqli_query($con, "SELECT * FROM game WHERE game_name LIKE '%$searchWord%' OR year LIKE '%$searchWord%'");
+		$resultMovie = mysqli_query($con, "SELECT * FROM movie WHERE movie_title LIKE '%$searchWord%' OR year LIKE '%$searchWord%'");
+		$resultMusic = mysqli_query($con, "SELECT * FROM music WHERE artist LIKE '%$searchWord%' OR song_name LIKE '%$searchWord%' OR album LIKE '%$searchWord%' OR year LIKE '%$searchWord%'");
+		$resultPhoto = mysqli_query($con, "SELECT * FROM photo WHERE description LIKE '%$searchWord%' OR year LIKE '%$searchWord%'");
+		$resultProgram = mysqli_query($con, "SELECT * FROM program WHERE program_name LIKE '%$searchWord%' OR creator LIKE '%$searchWord%' OR year LIKE '%$searchWord%'");		
+	}
+	
 	// escape string
 	function e($val){
 		global $con;
 		return mysqli_real_escape_string($con, trim($val));
 	}
-
+	
 	function display_error() {
 		global $errors;
 

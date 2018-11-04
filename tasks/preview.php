@@ -4,7 +4,7 @@
 <head>
 	<title>Storage content</title>
 	<link rel="stylesheet" type="text/css" href="../css/style.css">
-	<link rel="stylesheet" type="text/css" href="../css/styleRButtons.css">	
+	<link rel="stylesheet" type="text/css" href="../css/styleRButtons.css">
 	<style>
 		.header {
 			background: #003366;
@@ -20,7 +20,7 @@
 	<div class="header">
 		<h2>Preview storage content</h2>
 	</div>	
-	<form method="post" action="preview.php">
+	<form method="post" action="search.php">
 		<div class="input-group">
 			<p>In this section You could see all the written data in the Storage database. <br>You will find six different tables with unique content. 
 			You will be able to Edit or even Delete each tables data. <br>Of course, there will be several search functions.</p>			
@@ -31,16 +31,17 @@
 			<button type="button" class="btn hideTables" name="home">Hide tables</button>
 		</div>
 		<div class="input-group">				
-			<input type="text" name="valueToSearch" id="search">
-			<button type="submit" class="btn showTables" name="search" value="Filter">Search</button>			
+			<input type="text" name="searchWord" id="search">
+			<a href="search.php"><button type="submit" class="btn" name="search" value="Filter">Search</button></a>
 		</div>		
-	</form>	
+	</form>		
 	<!----------BOOK TABLE---------->
 	<div class="header">
 		<h2>Books table content</h2>
 		<p>
 			<button class="showbook">Show table</button>&nbsp;&nbsp;
-			<button class="hidebook">Hide table</button>			
+			<button class="hidebook">Hide table</button>&nbsp;&nbsp;
+			<a href="sortBookTable.php"><button class="showbook">Sort table</button></a>
 		</p>
 	</div>
 	<div class="divtablebook">
@@ -126,7 +127,8 @@
 		<h2>Games table content</h2>
 		<p>
 			<button class="showgame">Show table</button>&nbsp;&nbsp;
-			<button class="hidegame">Hide table</button>			
+			<button class="hidegame">Hide table</button>&nbsp;&nbsp;
+			<a href="sortGameTable.php"><button class="showbook">Sort table</button></a>			
 		</p>
 	</div>
 	<div class="divtablegame">

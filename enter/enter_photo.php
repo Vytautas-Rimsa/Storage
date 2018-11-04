@@ -29,11 +29,11 @@
 		</div>
 		<div class="input-group">
 			<label>Count</label>
-			<input type="number" name="count" min="1" max="10000" value="<?php echo $count; ?>">
+			<input type="number" name="count" min="1" max="10000" id="count"value="<?php echo $count; ?>">
 		</div>
 		<div class="input-group">
 			<label>Year</label>
-			<input type="number" name="year" min="1980" max="2100" value="<?php echo $year; ?>">
+			<input type="number" name="year" min="1980" max="2100" id="year" value="<?php echo $year; ?>">
 		</div>		
 		<div class="input-group">
 			<label>Storage Type</label>
